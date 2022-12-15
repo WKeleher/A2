@@ -6,10 +6,9 @@
 
 int main(int argc, char *argv[]){
   char *disk = malloc(4096);
-  wo_mount("testdisk123.txt", disk);
-  for (int i=65;i<91;i++){
-    disk[i] = i;
-  }
+  //createEmptyDisk("testdisk", disk);
+  wo_mount("testdisk", disk);
+  printDisk(disk);
   wo_unmount(disk);
   free(disk);
 }
